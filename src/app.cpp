@@ -7,6 +7,9 @@
 #include "blinker.h"
 
 
+
+
+
 /*
  * Alternate apps: constant duty cycle, or task scheduled duty cycle
  *
@@ -52,10 +55,3 @@ EpochTime App::timeToWake() {
 
 
 
-void App::configureSleepingGPIO() {
-	/*
-	 * App retains state of an LED during sleep.
-	 * The LED is off during sleep, but the SoC chip is retaining its off state.
-	 */
-    Blinker::configureGPIO();
-}
